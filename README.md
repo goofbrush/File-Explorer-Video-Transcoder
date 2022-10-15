@@ -8,6 +8,9 @@ The script will transcode a selected video file with a bitrate based on the vide
 ### How it Works
 There are only 2 scripts, the first is to edit the Windows registry to add an option to the right click function in file explorer and to associate it with the other script which runs the video transcoder on the selected video
 
+### Video Example
+[![Watch the video](https://i3.ytimg.com/vi/tzGFW7Pg0b4/maxresdefault.jpg)](https://youtu.be/tzGFW7Pg0b4)
+
 ## Getting Started
 ### Dependencies
 - HandbrakeCLI 
