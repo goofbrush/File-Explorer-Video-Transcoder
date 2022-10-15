@@ -23,10 +23,10 @@ There are only 2 scripts, the first is to edit the Windows registry to add an op
 6. Enter admin and run `make_key.py`
 
 ## Usage
-If everything is setup correctly, you will be able to right click any file with an extension from this list ["mp4", "mkv", "mov", "wmv", "avi"] and select "Compress Video"
+If everything is setup correctly, you will be able to right click a video file and be able to compress the video from the menu. The transcode settings can also be changed by selecting config from the right click menu
 
 ### Config
-If you would like to extend this to other video formats that handbrake supports, add them to the "fileType" list in  [make_key.py](make_key.py)
+The current with an extension from this list ["mp4", "mkv", "mov", "wmv", "avi"] and select "Compress Video"  If you would like to extend this to other video formats that handbrake supports, add them to the "fileType" list in  [make_key.py](make_key.py)
 
 If you opt to install pywin32, the script will calculate what bitrate to use based on the length of your video and force the output to be around the target filesize. You can change the target size in the config file, and if set to 0 the transcoder will always use the bitrate defined in the config
 
