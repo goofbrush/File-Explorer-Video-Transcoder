@@ -28,6 +28,6 @@ If everything is setup correctly, you will be able to right click any file with 
 ### Config
 If you would like to extend this to other video formats that handbrake supports, add them to the "fileType" list in  [make_key.py](make_key.py)
 
-If you opt to install pywin32, the script will calculate what bitrate to use based on the length of your video and force the output to be around the target filesize, so you can change the target size by editing the "sizeTarget" variable
+If you opt to install pywin32, the script will calculate what bitrate to use based on the length of your video and force the output to be around the target filesize. You can change the target size in the config file, and if set to 0 the transcoder will always use the bitrate defined in the config
 
-To change the transcodeing parameters go to the end of [handbrake_script.py](handbrake_script.py) and edit the handbrake_command list
+You can also change the transcodeing parameters by editing the config file, just seperate each input by a comma
