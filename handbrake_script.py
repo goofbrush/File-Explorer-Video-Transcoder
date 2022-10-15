@@ -50,13 +50,16 @@ file_path = " ".join(sys.argv[1:])  # get path to video file, passed in by right
 new_path = file_path[:file_path.rfind('.')] + "2.mp4"   # rename to prevent overwrite
 
 
-# -- comment out to remove win32com dependancy
-metadata = getMeta(file_path)
+# -- if win32com is not installed bitrate defaults to 874
+try:
+    metadata = getMeta(file_path)
 
-sizeTarget = 6 #in mb
-bitrate = (sizeTarget*1024 * 8) / convertTime(metadata["Length"])   # bitrate(kbps) = fileSize(kb) *8 / videoLength(s)
-bitrate = 2000 if bitrate > 2000 else bitrate   # cap bitrate at 2000(kbps)
-# # -- end
+    sizeTarget = 6 #in mb
+    bitrate = (sizeTarget*1024 * 8) / convertTime(metadata["Length"])   # bitrate(kbps) = fileSize(kb) *8 / videoLength(s)
+    bitrate = 2000 if bitrate > 2000 else bitrate   # cap bitrate at 2000(kbps)
+except:
+    print("win32 not installed")
+# -- 
 
 
 # # command line arguments to pass through, documentation can be found here: https://handbrake.fr/docs/en/latest/cli/command-line-reference.html
