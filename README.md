@@ -5,6 +5,9 @@ This is a helper script for HandbrakeCLI to run through the right click function
 
 The script will transcode a selected video file with a bitrate based on the video length as to have the output be below a certain size. This is helpful if you are uploading videos to sites with size limits, by default the script has a target of 6mb to make sure the result is below Discords 8mb file limit
 
+### How it Works
+There are only 2 scripts, the first is to edit the Windows registry to add an option to the right click function in file explorer and to associate it with the other script which runs the video transcoder on the selected video
+
 ## Getting Started
 ### Dependencies
 - HandbrakeCLI 
