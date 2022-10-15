@@ -23,7 +23,7 @@ There are only 2 scripts, the first is to edit the Windows registry to add an op
 6. Enter admin and run `make_key.py`
 
 ## Usage
-If everything is setup correctly, you will be able to right click a video file and be able to compress the video from the menu. The transcode settings can also be changed by selecting config from the right click menu
+If everything is setup correctly, you will be able to right click a video file and be able to compress the video from the menu. The transcode settings can also be changed by selecting config from the right click menu, the documentation for environment variables can be found here https://handbrake.fr/docs/en/latest/cli/command-line-reference.html
 
 ### Config
 The current with an extension from this list ["mp4", "mkv", "mov", "wmv", "avi"] and select "Compress Video"  If you would like to extend this to other video formats that handbrake supports, add them to the "fileType" list in  [make_key.py](make_key.py)
