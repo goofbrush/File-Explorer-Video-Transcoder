@@ -29,7 +29,7 @@ There are only 2 scripts, the first is to edit the Windows registry to add an op
 If everything is setup correctly, you will be able to right click a video file and be able to compress the video from the menu. The transcode settings can also be changed by selecting config from the right click menu, the documentation for environment variables can be found here https://handbrake.fr/docs/en/latest/cli/command-line-reference.html
 
 ### Config
-The current with an extension from this list ["mp4", "mkv", "mov", "wmv", "avi"] and select "Compress Video"  If you would like to extend this to other video formats that handbrake supports, add them to the "fileType" list in  [make_key.py](make_key.py)
+The function works for any file extension in this list ["mp4", "mkv", "mov", "wmv", "avi"]. If you would like to extend this to other video formats that handbrake supports, add them to the "fileType" list in  [make_key.py](make_key.py)
 
 If you opt to install pywin32, the script will calculate what bitrate to use based on the length of your video and force the output to be around the target filesize. You can change the target size in the config file, and if set to 0 the transcoder will always use the bitrate defined in the config
 
