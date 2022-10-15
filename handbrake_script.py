@@ -73,16 +73,22 @@ handbrakeConfig = []
 
 
 # -- Reading config file
-f = open(cfg_path,"r")
-lines = f.readlines()
-for line in lines: 
-    if(not isComment(line)): # discards comments and empty lines
-        if(line.lower().find("sizetarget") >= 0):
-            sizeTarget = getNum(line[line.find("="):], sizeTarget)
-        elif(line.lower().find("bitrate") >= 0):
-            bitrate = getNum(line[line.find("="):], bitrate)
-        elif(line.lower().find("handbrake") >= 0):
-            handbrakeConfig = line[line.find("=")+1:].split(",")
+try:
+    f = open(cfg_path,"r")
+    lines = f.readlines()
+    for line in lines: 
+        if(not isComment(line)): # discards comments and empty lines
+            if(line.lower().find("sizetarget") >= 0):
+                sizeTarget = getNum(line[line.find("="):], sizeTarget)
+            elif(line.lower().find("bitrate") >= 0):
+                bitrate = getNum(line[line.find("="):], bitrate)
+            elif(line.lower().find("handbrake") >= 0):
+                handbrakeConfig = line[line.find("=")+1:].split(",")
+except:
+    handbrakeConfig = ["-O","-e","x264","-2","-T","-r","30",
+        "--encoder-preset","VerySlow","-non-anamorphic","-B","96"]  # default handbrake config
+
+    print("config not found")
 # --end
 
 
